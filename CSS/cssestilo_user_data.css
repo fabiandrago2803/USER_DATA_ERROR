@@ -1,0 +1,309 @@
+/* estilos del head */ 
+head {
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    position: relative;
+    color: black;
+    font-family: fantasy;
+}
+
+/* estilos del body */ 
+body {
+    background-color: #cec8c8b0;
+    color: black;
+    font-size: 20px;
+    font-family: fantasy;
+}
+
+/* estilos etiquetas */ 
+.formlabel {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* estilos inputs */ 
+.grupoforminput {
+position: relative;
+}
+
+
+/* estilos type text */ 
+input[type=text] {
+  background-color: #cec8c817;
+  position: relative;
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid gray;
+  outline: none;
+  transition: 0.4s ease-in-out;
+  text-align: center;
+  font-size: 17px;
+  }
+input[type=text]:focus {
+    position: relative;
+    border-bottom: 3px solid hwb(29 1% 0%);
+    width: 30%;
+    outline: none;
+    text-align: center;
+    font-size: 25px;
+    box-shadow: 3px 0px 30px hwb(29 1% 0% / 0.795);
+}
+
+/* estilos type number */ 
+input[type=number] {
+    background-color: #cec8c817;
+    position: relative;
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid gray;
+    outline: none;
+    transition: 0.4s ease-in-out;
+    text-align: center;
+    font-size: 17px;
+    }
+  input[type=number]:focus {
+      position: relative;
+      border-bottom: 3px solid hwb(29 1% 0%);
+      width: 30%;
+      outline: none;
+      text-align: center;
+      font-size: 25px;
+      box-shadow: 3px 0px 30px hwb(29 1% 0% / 0.795);
+  }
+
+/* estilos type date */ 
+input[type=date] {
+    background-color: #cec8c817;
+    color: rgb(90, 89, 89);
+    opacity: 0.5;
+    position: relative;
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid gray;
+    outline: none;
+    transition: width 0.4s ease-in-out;
+    text-align: center;
+    font-size: 17px;
+}
+input[type=date]:focus {
+    position: relative;
+    color: rgb(90, 89, 89);
+    opacity: 0.5;
+    border-bottom: 3px solid hwb(29 1% 0%);
+    width: 30%;
+    outline: none;
+    text-align: center;
+    font-size: 25px;
+    box-shadow: 3px 0px 30px hwb(29 1% 0% / 0.795);
+}
+
+/* estilos type radio */ 
+input[type=radio] {
+width: 30px;
+height: 17px;
+    font-size: 17px;
+    position: relative;
+    vertical-align:middle;
+    float: right;
+    margin-right:1200px;
+    margin-top: 6px;
+   }
+
+/* estilos type email */ 
+input[type=email] {
+    background-color: #cec8c817;
+    position: relative;
+    width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid gray;
+  outline: none;
+  transition: width 0.4s ease-in-out;
+  text-align: center;
+  font-size: 17px;
+}
+input[type=email]:focus {
+    position: relative;
+    border-bottom: 3px solid hwb(29 1% 0%);
+    width: 30%;
+    outline: none;
+    text-align: center;
+    font-size: 25px;
+    box-shadow: 3px 0px 30px hwb(29 1% 0% / 0.795);
+}
+
+
+
+/* button */
+button { position: relative;
+    background-color: #000;
+    border: none;
+    width: 20%;
+    color: white;
+    padding: 16px 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-align: center;
+    transition-duration: 1s; 
+    transition-timing-function: linear;
+    font-size: 17px;
+}
+button:hover 
+{
+    position: relative;
+    background-color: hwb(29 1% 0%);
+    width: 30%;
+    outline: none;
+    text-align: center;
+    font-size: 17px;
+    box-shadow: 3px 0px 30px hwb(29 1% 0% / 0.795);
+}
+
+
+/* estilos parrafos */ 
+p {
+    color: black;
+    font-family: sans-serif bold;
+    font-size: 17px;
+    display: inline;
+    }
+    
+    /* estilos del placeholder */ 
+    ::placeholder {
+        color: rgb(90, 89, 89);
+        opacity: 0.5;
+       }
+
+
+
+       select { 
+        appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+        font-family: sans-serif bold;
+        font-size: 17px;
+        background-color: #cec8c817;
+        color: rgb(90, 89, 89);
+        opacity: 0.5;
+        position: relative;
+        width: 20%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: none;
+      border-bottom: 2px solid gray;
+      outline: none;
+      transition: width 0.4s ease-in-out;
+      text-align: center;
+       }
+
+       select:focus {
+        appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+        position: relative;
+    border-bottom: 3px solid hwb(29 1% 0%);
+    width: 30%;
+    outline: none;
+    text-align: center;
+    font-size: 25px;
+    box-shadow: 3px 0px 30px hwb(29 1% 0% / 0.795);
+       }
+
+      
+img {
+    opacity: 0.2;
+    min-height: 100%;
+    min-width: 1024px;
+      
+    width: 100%;
+    height: auto;
+      
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  @media screen and (max-width: 1024px) { 
+    img.bg {
+      left: 50%;
+      margin-left: -512px;   
+    }
+  }  
+
+
+input[type="submit"],
+input[type="reset"] {
+    position: relative;
+    background-color: #000;
+    border: none;
+    width: 20%;
+    color: white;
+    padding: 16px 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-align: center;
+    transition-duration: 1s; 
+    transition-timing-function: linear;
+    font-size: 17px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    position: relative;
+    background-color: hwb(29 1% 0%);
+    width: 30%;
+    outline: none;
+    text-align: center;
+    font-size: 17px;
+    box-shadow: 3px 0px 30px hwb(29 1% 0% / 0.795);
+}
+
+/*.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}*/
+
+
+#msg {
+  color: red;
+  font-size: 20px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+
+
+/*-----------------------------------------------------------------------------*/
+
+#nombreError {
+    display: none;
+    font-size: 0.8em;
+  }
+  
+  #nombreError.visible {
+    display: block;
+  }
+  
+  input.invalido {
+    border-color: red;
+  }
+  /*-----------------------------------------------------*/
+
+  

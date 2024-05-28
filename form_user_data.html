@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Planilla de Empleado</title>
+        <link rel="stylesheet" href="CSS/cssestilo_user_data.css" />
+        <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+        <script src="JS/scripts_user_data.js"></script>
+    </head>
+
+    <body>
+        <h1>Datos Personales del Empleado</h1>
+        <br>
+<br>
+<img src="IMG/empleados.jpg" width="1000" height="2000">
+
+<form id="mi_formulario" name="user_data"  class="form" action="registro_user_data.php" method="post" onsubmit="manejadorValidacion()"> 
+    <p>
+        <label for="nombre">Nombre:</label>
+        <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            maxlength="20"
+            placeholder="Ingrese su Nombre"
+            onkeypress="return (event.charCode == 32 || event.charCode == 209 || event.charCode == 241 || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))"
+        /><br>
+</p>
+<p>
+    <label for="apellido">Apellido:</label>
+    <input
+        type="text"
+        id="apellido"
+        name="apellido"
+        maxlength="30"
+        placeholder="Ingrese su Apellido"
+        onkeypress="return (event.charCode == 32 || event.charCode == 209 || event.charCode == 241 || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))"
+    /><br>
+</p>
+<p>
+<label for="genero"
+                    >Genero:</label>
+                <select
+                    id="genero"
+                    name="genero"
+                >
+                    <option value="">
+                        --Seleccione su Genero--
+                    </option>
+                    <option value="masculino">
+                        MASCULINO
+                    </option>
+                    <option value="femenino">
+                        FEMENINO
+                    </option>
+                    <option value="otro">
+                        OTRO
+                    </option>
+                </select><br>
+</p>
+<p>
+    <label for="edad"
+        >Edad:</label>
+    <input
+        type="number"
+        id="edad"
+        name="edad"
+        placeholder="Ingrese su Edad"
+        min="1" max="100" 
+        maxlength="3"
+        oninput=" 
+        if (this.value > 100 || this.value < 0) this.value = this.value.slice(0, this.value.length - 1);
+        if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" 
+    />
+</p>
+<label for="fechadenacimiento"
+                    >Fecha de Nacimiento:</label>
+                <input
+                    type="date"
+                    id="fechadenacimiento"
+                    name="fechadenacimiento"
+                    placeholder="Ingrese su Fecha de Nacimiento"
+                    min='1924-01-01'  onfocus="this.max=new Date().toISOString().split('T')[0]"
+                /><br>
+            </p><br>
+            <p>
+                <label for="direccion"
+                    >Direccion:</label
+                >
+                <input
+                    type="text"
+                    id="calle"
+                    name="calle"
+                    placeholder="Ingrese su Calle"
+                    maxlength="30"
+                    onkeypress="return (event.charCode == 32 || event.charCode == 209 || event.charCode == 241 || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 48 && event.charCode <=57))"
+                />
+                <input
+                type="number"
+                id="numero"
+                name="numero"
+                placeholder="Ingrese su Numero"
+                min="1"  max="99999"
+                maxlength="5"
+                oninput=" 
+        if (this.value > 99999 || this.value < 0) this.value = this.value.slice(0, this.value.length - 1);
+        if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            />
+            <input
+            type="number"
+            id="codpostal"
+            name="codpostal"
+            placeholder="Ingrese su Codigo Postal" 
+            maxlength="4"
+            pattern="[0-9]{4}"
+            onkeyup="funcion1()"
+            oninput=" 
+            if (this.value > 9431 || this.value < 0) this.value = this.value.slice(0, this.value.length - 1);
+            if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+    
+        /><br>
+        <input
+            type="text"
+            id="ciudad"
+            name="ciudad"
+            placeholder="Ingrese su Ciudad" 
+            maxlength="30"
+            onkeypress="return (event.charCode == 32 || event.charCode == 209 || event.charCode == 241 || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 48 && event.charCode <=57))"
+        />
+        <input
+        type="text"
+        id="provincia"
+        name="provincia"
+        placeholder="Ingrese su Provincia" 
+        onkeypress="return (event.charCode == 32 || event.charCode == 209 || event.charCode == 241 || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))"
+    />
+    </p><br>
+ <p>
+                <label for="codigoarea"
+                    >Codigo de Area:</label
+                >
+                <input
+                    type="number"
+                    id="codigoarea"
+                    name="codigoarea"
+                    placeholder="011"
+                    min="011" max="3894"
+                    maxlength="4"
+                    pattern="[0-9]{4}"
+                    onkeyup="funcion3()"
+                    oninput=" 
+            if (this.value > 3894 || this.value < 0) this.value = this.value.slice(0, this.value.length - 1);
+            if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+
+                />
+                <label for="telefono"
+                    >Telefono:</label
+                >
+            <input
+            type="number"
+            id="telefono"
+            name="telefono"
+            placeholder="1234-5678"
+            minlength="8"
+            maxlength="8"
+            pattern="[0-9]{8}"
+            onkeyup="funcion2()"
+            oninput=" 
+            if (this.value > 99999999 || this.value < 0) this.value = this.value.slice(0, this.value.length - 1);
+            if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+
+        />
+        <br>
+Fijo <input type="radio" id="fijo" name="fijo"><br>
+Movil <input type="radio" id="movil" name="movil"><br>
+            </p><br>
+            <p>
+<br>
+<label for="email"
+                    >E-mail:</label
+                >
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="ejemplo@mail.com"
+                /><br>
+            </p><br>
+            <p>
+                <label for="antiguedad"
+                    >Antiguedad (Años):</label
+                >
+                <input
+                    type="number"
+                    id="antiguedad"
+                    name="antiguedad"
+                    placeholder="Ingrese su Antiguedad" 
+                    min="1" max="50"
+                    maxlength="2"
+                    oninput=" 
+            if (this.value > 50 || this.value < 0) this.value = this.value.slice(0, this.value.length - 1);
+            if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                /><br>
+            </p><br>
+            <p>
+                <label for="areatrabajo"
+                    >Area de Trabajo::</label
+                >
+                <input
+                    type="text"
+                    id="areatrabajo"
+                    name="areatrabajo"
+                    placeholder="Ingrese su Area Laboral"
+                    onkeypress="return (event.charCode == 32 || event.charCode == 209 || event.charCode == 241 || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))"
+                /><br>
+            </p><br>
+            <br>
+            <p>
+ <div id="msg"></div>
+    <br> 
+
+<input type="submit" value="Registrarse" name="Enviar">
+<input type="reset" value="Reset" name="Reset"
+                />
+</p>
+</form>
+
+</div>
+</body>
+</html>
+          
